@@ -11,11 +11,9 @@ const Category = () => {
   const { categoriesMap } = useCategoriesGlobalContext();
 
   const [products, setProducts] = useState(categoriesMap[category]);
-  console.log(categoriesMap);
 
   useEffect(() => {
     setProducts(categoriesMap[category]);
-    console.log('hit');
   }, [category, categoriesMap]);
   return (
     <>
